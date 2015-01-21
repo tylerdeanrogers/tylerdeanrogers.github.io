@@ -1,6 +1,91 @@
-/* Fullscreen setup */
+/*///////////////////////// Global Styles //////////////////////////////////*/
+
+/* Typography */
+
+h1 {
+  font-family: 'helvetica', serif;
+  font-weight: 800;
+  font-size: 150px;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Droid Sans Mono', helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #e4dad0;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Droid Sans Mono', helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #cac0b7;
+}
+
+h3 span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #a44e56 ;
+}
+
+h4 {
+  font-family: 'Droid Sans Mono', helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #a44e56;
+}
+
+p {
+  font-family: 'Droid Sans Mono', helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 20px;
+  color: #242424;
+}
+
+p span {
+  opacity: 0.0;
+}
+
+a {
+  font-family: 'Droid Sans Mono', helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #fff !important;
+}
+
+ul {
+  margin-left: 0;
+}
+/* Buttons */
+
+.outline-button {
+  border: solid 2px #fff;
+  background-color: rgba(255, 255, 255, 0.0);
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.outline-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Fullwidth Backgrounds */
+
+.fullwidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+/* Fullscreen Veritcal Centering Setup */
 html, body {
-    /* give this to all tags from html to .fullscreen */
     height:100%;
 }
 .fullscreen,
@@ -15,8 +100,6 @@ html, body {
     height:100%;
     overflow:hidden;
 }
-
-/* content centering styles */
 .content-a {
     display:table;
 }
@@ -25,11 +108,8 @@ html, body {
     position:relative;
     vertical-align:middle;
     text-align:center;
-
 }
-/* background setup */
 .background {
-
     background-repeat:no-repeat;
     /* custom background-position */
     background-position:50% 50%;
@@ -37,114 +117,40 @@ html, body {
     background-position:50% 50%\9 !important;
 }
 
-.fullwidth {
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: initial;
-}
-/* Typography */
+/*///////////////////////// Sections //////////////////////////////////*/
 
-h1 {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 150px;
-  color: #fff;
-}
-
-h2 {
-  font-family: 'Droid Sans Mono', helvetica, sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 15px;
-  color: #e4dad0;
-  padding-bottom: 10px;
-}
-
-h3 {
-  font-family: 'Droid Sans Mono', helvetica, sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #cac0b7;
-}
-
-h3 span {
-  font-size: 10px;
-  letter-spacing: 8px;
-  color: #a44e56 ;
-}
-
-h4 {
-  font-family: 'Droid Sans Mono', helvetica, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  color: #a44e56;
-}
-
-p {
-  font-family: 'Droid Sans Mono', helvetica, sans-serif;
-  font-size: 10px;
-  color: #242424;
-}
-
-p span {
-  opacity: 0.0;
-}
-a {
-  font-family: 'Droid Sans Mono', helvetica, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: #fff !important;
-}
-
-.apply {
-  margin-top: 50px;
-}
-
-.outline {
-  border-radius: 70px;
-  border: solid 2px #fff;
-  background-color: rgba(255, 255, 255, 0.0);
-  padding-top: 8px;
-  padding-bottom: 8px;
-
-}
-
-.outline:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
+/* Section Dividers */
 .headline {
   height: 100px;
   background-color: #242424;
   padding-top: 30px;
 }
 
-/* Sections */
-
+/* Hero */
 .hero {
-  background: url('../img/bg-4.jpg') center center;
+  background: url('../img/bg-8.jpg') top right;
   background-size: cover;
   position: center;
   background-repeat: no-repeat;
 }
 
-.item {
-  background: #242424;
-  height: 300px;
-  padding-top: 42px;
+.hero p {
+  color: #fff;
+  margin-bottom: 0;
 }
 
+.hero li {
+  padding-bottom: 20px;
+}
+
+/* Speakers */
 .speakers {
   background: #242424;
 }
 
-.schedule {
-  background: #eee;
+/* Mission */
+.section {
+  background: #fff;
   padding: 3%;
 }
 
