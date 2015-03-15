@@ -146,7 +146,7 @@ ul.social li {
 }
 
 .icon {
- margin-right: 25px;
+ margin-right: 10px;
 }
 
 .hover:hover {
@@ -180,9 +180,6 @@ ul.social li.icon .last{
 ul.social li a {
   display: block;
   text-decoration: none;
-}
-
-ul.social li .fa-inverse {
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
