@@ -151,6 +151,10 @@ ul.social li {
  font-size: 22px;
 }
 
+.last {
+  font-size: 22px;
+}
+
 .hover:hover {
    color: #111 !important;
   -webkit-transition: all 0.2s ease-in-out;
@@ -183,7 +187,6 @@ ul.social li {
 
 ul.social li.icon .last{
   margin-right: 0 !important;
-  font-size: 22px;
 }
 
 ul.social li a {
