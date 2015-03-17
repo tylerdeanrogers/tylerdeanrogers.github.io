@@ -143,7 +143,7 @@ ul.social {
 ul.social li {
   max-width: 630px;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 13px;
 }
 
 .icon {
@@ -166,7 +166,6 @@ ul.social li {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 
 .shadow {
   text-shadow: 2px 2px 8px rgba(89, 89, 89, 0.3);
