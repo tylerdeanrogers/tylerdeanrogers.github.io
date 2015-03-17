@@ -685,7 +685,7 @@ img {
   }
   ul.social {
    list-style: none;
-   margin: 0;
+   margin: 0 0 0 15px;
   }
 }
 
