@@ -109,10 +109,14 @@ a {
   padding: 5px 0 5px 0;
 }
 
+.button a:hover{
+  background-color: #A08F68;
+}
+
 .button a {
 font-family:  "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 600;
-padding: 5px 12px 5px 15px;
+padding: 6px 12px 6px 15px;
 border: 1px solid rgba(0, 0, 0, 0.8);
 border-radius: 100px;
 font-size: 10px;
@@ -163,6 +167,7 @@ ul.social li {
 
 .hover:hover {
    color: #111 !important;
+   background-color: rgba(200 200 200 0.3);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
