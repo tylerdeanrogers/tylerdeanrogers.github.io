@@ -83,7 +83,7 @@ p {
   line-height: 38px;
   display:block;
   margin: 0;
-  color: rgba(0, 0, 0, 0.8);
+  color: #333;
 }
 
 p:first-child:first-letter { 
@@ -98,6 +98,11 @@ p:first-child:first-letter {
 a {
  color: #A08F68;
  text-decoration: none;
+}
+
+p a:hover {
+ color: #A08F68;
+ border-bottom: 1px dotted #333;
 }
 
 .inactive {
