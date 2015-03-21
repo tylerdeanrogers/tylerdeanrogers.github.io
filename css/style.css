@@ -36,10 +36,10 @@ h2 {
 }
 
 .dark {
-  color: rgba(0, 0, 0, 0.8)!important;
+  color: #222 !important;
 }
 .light {
-  color: rgba(0, 0, 0, 0.6)!important;
+  color: #444 !important;
 }
 
 h3 {
