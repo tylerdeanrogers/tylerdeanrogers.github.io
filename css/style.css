@@ -45,7 +45,7 @@ h2 {
 h3 {
   font-family:  "freight-text-pro", serif;
   font-weight: 300;
-  font-style: italic;
+  font-style: regular;
   font-size: 22px;
   color: #D8D8D8;
   margin-bottom: 0;
@@ -86,14 +86,7 @@ p {
   color: #333;
 }
 
-p:first-child:first-letter { 
-  float: left; 
-  color: rgba(0, 0, 0, 0.8); 
-  font-size: 90px; 
-  line-height: 60px; 
-  padding-top: 12px; 
-  padding-right: 5px; 
-}
+
 
 a {
  color: #A08F68;
