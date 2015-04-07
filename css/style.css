@@ -72,7 +72,7 @@ h5 {
   font-size: 10px;
   letter-spacing: 2px;
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 
@@ -110,7 +110,7 @@ p a:hover {
 .button {
   text-align: center;
   padding: 5px 0 5px 0;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .button a:hover{
@@ -126,7 +126,7 @@ font-family:  "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-seri
 font-weight: 600;
 padding: 6px 12px 6px 15px;
 border: 1px solid rgba(0, 0, 0, 0.8);
-border-radius: 100px;
+border-radius: 2px;
 font-size: 10px;
 letter-spacing: 2px;
 text-transform: uppercase;
@@ -359,6 +359,11 @@ section#teaching-learning {
 }
 .header-pine {
   background: url('images/pine-2.png') no-repeat; 
+  background-size: cover;
+  padding: 150px 0 150px 0;
+}
+.header-vl {
+  background: url('images/vl-5.png') no-repeat; 
   background-size: cover;
   padding: 150px 0 150px 0;
 }
