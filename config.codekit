@@ -99,39 +99,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/css\/images\/sm-1.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 54031,
-		"inputAbbreviatedPath": "\/css\/images\/sm-1.png",
-		"outputAbbreviatedPath": "\/css\/images\/sm-1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/css\/images\/sm-2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9087,
-		"inputAbbreviatedPath": "\/css\/images\/sm-2.png",
-		"outputAbbreviatedPath": "\/css\/images\/sm-2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/css\/images\/sm-3.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/css\/images\/sm-3.png",
-		"outputAbbreviatedPath": "\/css\/images\/sm-3.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/css\/images\/tlc-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -492,15 +459,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/pine.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/super-mariota.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/super-mariota.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
