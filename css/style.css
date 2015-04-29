@@ -42,11 +42,6 @@ h2 {
   color: #444 !important;
 }
 
-.sm {
-  background-image: url('images/ni-2.png');
-  background-size: 100% no-repeat;
-}
-
 h3 {
   font-family:  "freight-text-pro", serif;
   font-weight: 300;
@@ -205,6 +200,7 @@ ul.social li {
 
 .title {
   padding: 80px 0 80px 0;
+  max-width: 650px;
   margin: 0 auto;
 }
 
@@ -229,6 +225,13 @@ ul.navigation {
   margin: 0 auto ;
   padding: 0;
   text-align: center;
+}
+
+h1.heading {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-bottom:0px;
+  color: #fff;
 }
 
 ul.navigation li {
@@ -363,17 +366,6 @@ section#teaching-learning {
   background: url('images/vl-5.png') no-repeat; 
   background-size: cover;
   padding: 150px 0 150px 0;
-}
-.header-sm {
-  background: url('images/vl-5.png') no-repeat; 
-  background-size: cover;
-  padding: 150px 0 150px 0;
-
-}
-
-.border {
-  border: solid 15px #fff;
-  border-bottom: 0;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -520,7 +512,6 @@ img {
   border-top: 1px solid #E2E2E2;
   border-bottom: 1px solid #E2E2E2;
 }
-
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////   Animations   //////////////////////////////////////////////////////////////////////////////////////*/
 
