@@ -123,7 +123,7 @@ a:hover {
 
 .menu a {
   color: blue;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: .3px;
   font-style: normal;
   text-decoration: none;
@@ -165,8 +165,9 @@ a:hover {
   }
   .menu a {
   color: blue;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: .3px;
   font-style: normal;
   text-decoration: none;
+  }
 }
