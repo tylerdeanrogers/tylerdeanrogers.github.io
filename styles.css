@@ -395,34 +395,3 @@ body {
 svg.phone {
 	display: none;
 }
-@media screen and (max-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) {
-	body {
-		background: #FF3F05;
-	}
-	body::after {
-		content: "I encourage you to rotate your phone like a normal fucking human being.";
-		color: #F0ECEB;
-		position: absolute;
-		font-size: 24px;
-		line-height: 32px;
-		height: 64px;
-		margin: auto;
-		top: 0;
-		bottom: 0;
-		padding: 0 56px;
-	}
-	svg.phone {
-		display: block;
-		position: absolute;
-		width: 72px;
-		height: 128px;
-		top: 0;
-		right: 56px;
-		bottom: 0;
-		left: auto;
-		margin: auto;
-	}
-	#wrapper {
-		display: none;
-	}
-}
