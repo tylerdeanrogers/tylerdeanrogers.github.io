@@ -230,7 +230,9 @@ body {
 }
 @media screen and (max-width: 1216px) {
 	#wrapper #left h1 {
-		padding: 34px 0 0 56px;
+		font-size: 62px;
+		line-height: 62px;
+		padding: 54px 0 0 56px;
 	}
 	#wrapper #left #yellow {
 		top: 58px;
@@ -291,10 +293,10 @@ body {
 		z-index: 2;
 	}
 	#wrapper #left h1 {
-		font-size: 54px;
-		line-height: 66px;
-		padding: 50px 0 0 72px;
-	}
+		font-size: 62px;
+		line-height: 62px;
+		padding: 54px 0 0 56px;
+	}	
 	#wrapper #left #links {
 		left: 72px;
 		bottom: 56px;
@@ -309,9 +311,9 @@ body {
 }
 @media screen and (max-width: 768px) {
 	#wrapper #left h1 {
-		font-size: 54px;
-		line-height: 66px;
-		padding: 34px 0 0 56px;
+		font-size: 62px;
+		line-height: 62px;
+		padding: 54px 0 0 56px;
 	}
 	#wrapper #left #links {
 		left: 56px;
@@ -342,7 +344,9 @@ body {
 }
 @media screen and (max-width: 544px) {
 	#wrapper #left h1 {
-		padding: 18px 0 0 32px;
+		padding:60px 0 0 32px;
+		font-size: 62px;
+		line-height: 62px;
 	}
 	#wrapper #left #links {
 		left: 32px;
