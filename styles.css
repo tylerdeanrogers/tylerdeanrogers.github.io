@@ -29,11 +29,11 @@ html, body {
 }
 body {
 	font-family: "graphik-regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #333;
+	color: #191919;
 	background: #fff;
 }
 #text a{
-		color: #333;
+		color: #191919;
 		-webkit-transition: all 0.32s;
 		-moz-transition: all 0.32s;
 		-ms-transition: all 0.32s;
@@ -49,7 +49,7 @@ body {
 		transition: all 0.32s;
 }
 #button a{
-		color: #333;
+		color: #191919;
 		-webkit-transition: all 0.32s;
 		-moz-transition: all 0.32s;
 		-ms-transition: all 0.32s;
@@ -77,7 +77,7 @@ body {
 }
 #wrapper #left {
 	z-index: 2;
-	color: #333;
+	color: #191919;
 }
 #wrapper #left h1 {
 	font-family: "graphik-black";
@@ -175,7 +175,7 @@ body {
 	background: #ECE4DC;
 }*/
 #wrapper #right {
-	background: #ECE4DC;
+	background: #191919;
 }
 #wrapper #right #text {
 	position: absolute;
@@ -348,7 +348,7 @@ body {
 		padding: 54px 0 0 56px;
 	}
 	#wrapper #left h3 {
-		padding: 54px 0 0 56px;
+		padding: 30px 0 0 56px;
 	}
 	#wrapper #left #links {
 		left: 56px;
