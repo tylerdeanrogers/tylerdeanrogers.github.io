@@ -29,11 +29,11 @@ html, body {
 }
 body {
 	font-family: "graphik-regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #141313;
+	color: #333;
 	background: #fff;
 }
 #text a{
-		color: #fff;
+		color: #333;
 		-webkit-transition: all 0.32s;
 		-moz-transition: all 0.32s;
 		-ms-transition: all 0.32s;
@@ -41,7 +41,23 @@ body {
 		transition: all 0.32s;
 }
 #text a:hover{
-		color: #141313;
+		color: #fff;
+		-webkit-transition: all 0.32s;
+		-moz-transition: all 0.32s;
+		-ms-transition: all 0.32s;
+		-o-transition: all 0.32s;
+		transition: all 0.32s;
+}
+#button a{
+		color: #333;
+		-webkit-transition: all 0.32s;
+		-moz-transition: all 0.32s;
+		-ms-transition: all 0.32s;
+		-o-transition: all 0.32s;
+		transition: all 0.32s;
+}
+#button a:hover{
+		color: #fff;
 		-webkit-transition: all 0.32s;
 		-moz-transition: all 0.32s;
 		-ms-transition: all 0.32s;
@@ -61,6 +77,7 @@ body {
 }
 #wrapper #left {
 	z-index: 2;
+	color: #333;
 }
 #wrapper #left h1 {
 	font-family: "graphik-black";
@@ -68,6 +85,15 @@ body {
 	font-size: 72px;
 	line-height: 72px;
 	padding: 50px 0 0 72px;
+	position: relative;
+	z-index: 2;
+}
+#wrapper #left h3 {
+	font-family: "graphik-regular";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 30px 0 0 72px;
 	position: relative;
 	z-index: 2;
 }
@@ -214,7 +240,7 @@ body {
 #wrapper #right #circle .tiny {
 	width: 196px;
 	height: 112px;
-	display: none;
+	display: none; 
 }
 @media screen and (max-width: 1336px) {
 	#wrapper #right #box {
@@ -233,6 +259,9 @@ body {
 		font-size: 62px;
 		line-height: 62px;
 		padding: 54px 0 0 56px;
+	}
+	#wrapper #left h3 {
+		padding: 30px 0 0 56px;
 	}
 	#wrapper #left #yellow {
 		top: 58px;
@@ -297,6 +326,9 @@ body {
 		line-height: 62px;
 		padding: 54px 0 0 56px;
 	}	
+	#wrapper #left h3 {
+		padding: 30px 0 0 56px;
+	}
 	#wrapper #left #links {
 		left: 72px;
 		bottom: 56px;
@@ -313,6 +345,9 @@ body {
 	#wrapper #left h1 {
 		font-size: 62px;
 		line-height: 62px;
+		padding: 54px 0 0 56px;
+	}
+	#wrapper #left h3 {
 		padding: 54px 0 0 56px;
 	}
 	#wrapper #left #links {
@@ -348,6 +383,9 @@ body {
 		font-size: 62px;
 		line-height: 62px;
 	}
+	#wrapper #left h3 {
+		padding:30px 0 0 32px;
+	}
 	#wrapper #left #links {
 		left: 32px;
 		bottom: 32px;
@@ -369,6 +407,10 @@ body {
 	#wrapper #left h1 {
 		padding: 10px 0 0 24px;
 	}
+	#wrapper #left h3 {
+		padding: 10px 0 0 24px;
+	}
+
 	#wrapper #left #links {
 		left: 24px;
 		bottom: 20px;
