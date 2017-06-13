@@ -6,7 +6,13 @@
   <title>Tyler Rogers</title>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
 </head>
-<style type="text/css">.washed-red{color:#FAC8BF;!important}</style>
+<style type="text/css">.washed-red{color:#FAC8BF;!important}
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+.hover_img { z-index: 900;}
+
+</style>
 <body class="avenir bg-white black">
   <header class="w-100 fixed z-2">
     <div class="mw9 ph3-l cf center">
@@ -28,6 +34,15 @@
           <p class="mt0-ns mt2 f2-l f3-ns f4 lh-copy">Bespoke Post lacked visual consistency, information hierarchy, and a cohesive design system which meant users had trouble completing simple tasks and increased cognitive load. To top it off our internal design/dev process was unpredictable and slow.<br><br>I fixed this by designing a modular system that would extend across the entire site.</p>
         </section>
       </div>
+
+    <!--
+     <div class="hover_img">
+     <a href="#">Show Image<span><img src="img/onboarding.jpg" alt="image" height="600" /></span></a>
+      </div>
+      -->
+
+
+
 
       <article class="mw9 mw9-ns center pt4">
         <div class="aspect-ratio aspect-ratio--4x3 mb4">
