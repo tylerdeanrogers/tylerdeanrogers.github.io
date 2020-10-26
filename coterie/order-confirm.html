@@ -1,0 +1,665 @@
+{% assign has_physical_product = false %}
+
+{% for item in line_items %}
+  {% if item.product.type == 'Diapers' or item.product.type == 'Wipes' %}
+    {% assign has_physical_product = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign gift_card_emails = "" %}
+{% for attr in attributes %}
+  {% if attr[0] contains "gift_card_send_email" %}
+    {% if gift_card_emails == blank %}
+      {% assign gift_card_emails = gift_card_emails | append: attributes[attr[0]] %}
+    {% else %}
+      {% assign gift_card_emails = gift_card_emails | append: ', ' | append: attributes[attr[0]] %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>Order confirmation {{ number }}</title>
+
+
+
+  <!-- CSS Reset -->
+  <style>
+
+
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+
+    }
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    table table table {
+      table-layout: auto;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    *[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    .x-gmail-data-detectors,
+    .x-gmail-data-detectors *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+    }
+
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+
+    img.g-img + div {
+      display: none !important;
+    }
+
+    .button-link {
+      text-decoration: none !important;
+    }
+
+    @media  only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      /* iPhone 6 and 6+ */
+      .email-container {
+        min-width: 375px !important;
+      }
+    }
+
+  </style>
+
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+
+  <!-- Progressive Enhancements -->
+  <style>
+
+   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    ul,
+    li,
+    td,
+    strong,
+    span {
+      font-family: 'Open Sans', sans-serif !important;
+    }
+
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #45C8FF !important;
+      border-color: #45C8FF !important;
+    }
+
+    @media  screen and (max-width: 480px) {
+
+      .fluid {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column-center {
+        text-align: center !important;
+      }
+
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+    }
+
+  </style>
+
+</head>
+<body width="100%" bgcolor="#FFFFFF" style="margin: 0; mso-line-height-rule: exactly;">
+<center style="width: 100%;  text-align: left;">
+
+  <!-- Visually Hidden Preheader Text : BEGIN -->
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;
+">
+    Thank you for your order.
+  </div>
+<!-- added white space to left of preview text -->
+<div style="display: none; max-height: 0px:;">
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+  <!-- Visually Hidden Preheader Text : END -->
+
+  <div style="max-width: 680px; margin: auto; background-color:FFFFFF;" class="email-container">
+    <!--[if mso]>
+    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="680"
+         align="center">
+      <tr>
+        <td>
+    <![endif]-->
+
+    <!-- Email Header : BEGIN -->
+    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+         width="100%" style="width: 88%; max-width: 680px; ">
+      <tr>
+        <td style="padding: 30px 0; text-align: left">
+                    {%- if shop.email_logo_url %}
+                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}">
+                    {%- else %}
+                      <h1 class="shop-name__text">
+                        <a href=" https://www.coterie.com?utm_medium=Email&utm_source=Shopify&utm_campaign=orderconfirmation"</a>
+                      </h1>
+                    {%- endif %}
+        </td>
+      </tr>
+    </table>
+    <!-- Email Header : END -->
+
+    <!-- Email Body : BEGIN -->
+    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+         width="100%" style="max-width: 680px;" class="email-container">
+      <tr>
+        <td bgcolor="#FFFFFF">
+          <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0"
+               width="100%">
+            <tbody>
+
+            <tr>
+              <td style="text-align: left;  line-height: 1.8">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                  style="font-size:0px; width: 88% !important; min-width: 88%; max-width: 88%;">
+                  <tbody>
+                  <tr>
+                    <td style="padding: 30px 0 10px;">
+                      <div style="font-size: 16px; font-weight: 300; text-transform: uppercase; line-height: 1.8">
+                        ORDER {{ order_number }}
+                      </div>
+                      <h2 style="font-size: 28px;
+ font-weight: 200; margin: 0; line-height: 1.8">
+                        Thank you for your order.
+                      </h2>
+
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                        style="font-size:0px; width: 100% !important; min-width: 100%; max-width: 100%;">
+                        <tbody>
+                        <tr>
+                          <td width="40" style="width: 40px; padding: 26px 0 10px">
+                            &nbsp;
+                          </td>
+                          <td>
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="40" style="width: 40px; padding: 30px 0 10px; border-top:1px solid #000;">
+                            &nbsp;
+                          </td>
+                          <td>
+                            &nbsp;
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      {% if has_physical_product == true %}
+                        <p style="font-size:16px; font-weight: 300;margin: 0; line-height: 1.8">
+                         Thank you for your Coterie order! We’re excited to bring you and your baby the highest performing diapers and wipes on the market (and the universe, but our lawyers won’t let us say that). In the meantime, please click <a style="color: #000;" href="{{ order_status_url }}" target="_blank">here</a> to get real-time updates on your shipment.
+  <p style="font-size:16px;font-weight: 300; padding-top: 20px; margin: 0; line-height: 1.8">
+                         We’re getting your order ready and you can track it once it ships you can track it <a style="color: #000;" href="{{ order_status_url }}" target="_blank">here</a>. Due to COVID-19, and the sensitive nature of baby care products, we are no longer accepting returns or exchanges. Effective March 1st, 2020, all orders are final sale. This is for the health and safety of all our customers, babies, and employees, and will be in effect until further notice.
+                        </p>
+                         <p style="font-size:16px;font-weight: 300; padding-top: 20px; margin: 0; line-height: 1.8">
+                         </p>
+                        </p>
+                      {% endif %}
+                      {% if gift_card_emails != blank %}
+                        <p style="font-size:16px;font-weight: 300; padding-top: 20px; margin: 0; line-height: 1.8">
+                          {% if gift_card_emails contains "," %}
+                            Your digital gift cards have been sent to {{ gift_card_emails}}.
+                          {% else %}
+                            Your digital gift card has been sent to {{ gift_card_emails}}.
+                          {% endif %}
+                        </p>
+                      {% endif %}
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#FFFFFF">
+                <table role="presentation" cellpadding="0" cellspacing="0"
+                     style="font-size:0px; width: 88% !important; min-width: 88%; max-width: 88%;"
+                     align="center" border="0">
+                  <tbody>
+                  <tr>
+                    <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:20px 0px;">
+                      <!--[if mso | IE]>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="vertical-align:top;width:600px;">
+                      <![endif]-->
+                      <div class="mj-column-per-100 outlook-group-fix"
+                        style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                             border="0">
+                          <tbody>
+                          <tr>
+                            <td style="word-break:break-word;font-size:0px;">,,
+                              <table style="color:#000000;  font-size:16px;line-height:22px;"
+                                   border="0" width="100%">
+                                <thead>
+                                <tr>
+                                  <th width="120" style="padding:45px 0 15px;text-align:left;font-size:14px;line-height:22px;">
+                                    <span style="font-weight: 300">Order Details</span>
+                                  </th>
+                                  <th>
+                                    &nbsp;
+                                  </th>
+                                  <th style="padding:15px 0;text-align:right;font-size:16px;line-height:22px;">
+                                    <span style="font-weight: normal">&nbsp;</span>
+                                  </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for item in line_items %}
+                                  <tr>
+                                    <td align="center" width="39" style="padding: {% if forloop.first %}30px{% else %}10px{% endif %} 10px {% if forloop.last %}30px{% else %}10px{% endif %} 25px; width: 39px;text-align: center;">
+                                      <div style="width: 39px; height: 24px;">
+                                        <img width="39" height="24" style="display: block;"
+                                          src="{{ item.image | img_url: 'width=78&height=48' }}" />
+                                      </div>
+                                    </td>
+                                    <td style="padding: {% if forloop.first %}20px{% else %}10px{% endif %} 0 {% if forloop.last %}20px{% else %}10px{% endif %} 0; line-height:1.5; color:#111111; font-size:16px;text-align:left;font-weight:300;">
+                                    {% if item.product.title %}
+                                      {% assign item_title = item.product.title %}
+                                    {% else %}
+                                      {% assign item_title = item.title %}
+                                    {% endif %}
+                                          {{ item.quantity }} &times; {{ item_title }}
+                                        <div style="font-size:14px;">
+                                          {% assign checkout_description = item.variant.metafields.description['checkout_description'] %}
+                                          {% if checkout_description %}
+                                            {{ checkout_description }}
+                                          {% else %}
+                                            {{ item.variant.title }}
+                                          {% endif %}
+                                        </div>
+                                    </td>
+                                    <td style="padding: {% if forloop.first %}20px{% else %}10px{% endif %} 0 {% if forloop.last %}20px{% else %}10px{% endif %} 0; line-height: 1.5; color: #111111; font-size:16px;font-weight: 300;text-align:right;">
+                                      {% if discounts_amount > 0 %}
+                                        <div>{{ item.price | money }}</div>
+                                      {% else %}
+                                        {{ item.price | money }}
+                                      {% endif %}
+                                    </td>
+                                  </tr>
+                                {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                {% if total_discounts > 0 %}
+                                  <tr style="border-top:1px solid #dddddd;">
+                                    <td colspan="2" style="padding: 10px 0 0 0;text-align:right;font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                      Promo Code
+                                    </td>
+                                    <td width="200" style="padding: 10px 0 0 0;font-size:14px;font-weight: 300;line-height:18px;text-align:right; color:#333333">
+                                      -{{  total_discounts | money }}
+                                    </td>
+                                  </tr>
+                                {% endif %}
+                                <tr >
+                                  <td colspan="2" style="padding: 20px 0 0 0;text-align:right; font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                    Subtotal
+                                  </td>
+                                  <td style="padding: 30px 0 0 0;font-size:14px;font-weight: 300;line-height:18px;text-align:right; color:#333333">
+                                    {{ subtotal_price | money }}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 10px 0 0 0;text-align:right;font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                    Taxes
+                                  </td>
+                                  <td style="padding: 10px 0 0 0;font-size:14px;font-weight: 300;line-height:18px;text-align:right; color:#333333">
+                                    {% if tax_price > 0 %}
+                                      {{ tax_price | money }}
+                                    {% else %}
+                                      &mdash;
+                                    {% endif %}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 10px 0 0 0;text-align:right;font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                    Shipping
+                                  </td>
+                                  <td style="padding: 10px 0 0 0;font-size:14px;font-weight: 300;line-height:18px;text-align:right; color:#333333">
+                                    {% if shipping_method.price > 0 %}
+                                      {{ shipping_method.price | money }}
+                                    {% else %}
+                                      FREE
+                                    {% endif %}
+                                  </td>
+                                </tr>
+
+                                  <tr>
+                                    <td colspan="2" style="padding: 10px 0 0 0;text-align:right;font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                      Total being charged
+                                    </td>
+                                    <td width="200" style="padding: 10px 0 0 0;font-size:14px;font-weight: 300;line-height:18px;text-align:right; color:#333333">
+                                      {{  (total_price | money }}
+                                    </td>
+                                  </tr>
+                                <tr>
+                                  <td colspan="3" style="padding: 30px 0 0 0;text-align:right;font-size:14px;font-weight: 300;line-height:18px;color:#333333">
+                                  </td>
+                                </tr>
+                                <tr style="border-top:1px solid #dddddd;">
+                                  <td colspan="2" style="padding: 30px 0 10px 0;text-align:right;font-size:26px;line-height:26px;font-weight: 200;color:#333333">
+                                    Total
+                                  </td>
+                                  <td style="padding: 30px 0 10px 15px; font-size:26px;line-height:26px;text-align:right;font-weight: 200; color:#333333">
+                                    <span style="font-size: 26px; white-space: nowrap;">
+                                      {{ total_price | money  }}
+                                    </span>
+                                  </td>
+                                </tr>
+                                </tfoot>
+                              </table>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]>
+                      </td></tr></table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Customer information -->
+            <tr>
+              <td bgcolor="#FFFFFF" align="center" height="100%" valign="top" width="100%" style="padding: 30px 0 0 0;">
+                <!--[if mso]>
+                <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+                  <tr>
+                    <td align="center" valign="top" width="660">
+                <![endif]-->
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:660px; width: 88%; padding-top: 80px;">
+                  <tbody>
+                  <tr>
+                    <td valign="top" style="font-size:0;">
+                      <!--[if mso]>
+                      <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                        <tr>
+                          <td align="left" valign="top" width="330">
+                      <![endif]-->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tbody>
+                        <tr>
+                            <td style="padding:15px 0 30px;text-align:left;font-size:14px;line-height:1.5; vertical-align: top;" width="50%" class="stack-column">
+                              <span style="font-weight: 300">Shipping Address</span>
+                              <div style="font-size: 16px; font-weight: 300; padding: 30px 0">
+                              {% if shipping_address.address1 %}
+                                <div>{{ shipping_address.name }}</div>
+                                <div>{{ shipping_address.address1 }}</div>
+                                <div>{{ shipping_address.address2 }}</div>
+                                <div>{{ shipping_address.city }}, {{ shipping_address.province }} {{ shipping_address.zip }}</div>
+                                <div>{{ shipping_address.country }}</div>
+                                <div>{{ shipping_address.phone }}</div>
+                              {% else %}
+                                <div>None provided</div>
+                              {% endif %}
+                            </td>
+                          <td style="padding:15px 0 30px;text-align:left;font-size:14px;line-height:1.5; vertical-align: top;" width="50%" class="stack-column">
+                            <span style="font-weight: 300">Billing Address</span>
+                            <div style="font-size: 16px; font-weight: 300; padding: 30px 0">
+                            {% if billing_address.address1 %}
+                              <div>{{ billing_address.name }}</div>
+                              <div>{{ billing_address.address1 }}</div>
+                              <div>{{ billing_address.address2 }}</div>
+                              <div>{{ billing_address.city }} {{ billing_address.state }} {{ billing_address.zip }}</div>
+                              <div>{{ billing_address.country }}</div>
+                              <div>{{ billing_address.phone }}</div>
+                            {% else %}
+                              <div>None provided</div>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <!--[if mso]>
+                      </td>
+                      </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FFFFFF" align="center" height="100%" valign="top" width="100%" style="padding: 0 0 30px 0;">
+                <!--[if mso]>
+                <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+                  <tr>
+                    <td align="center" valign="top" width="660">
+                <![endif]-->
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:660px; width: 88%;">
+                  <tbody>
+                  <tr>
+                    <td valign="top" style="font-size:0;">
+                      <!--[if mso]>
+                      <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                        <tr>
+                          <td align="left" valign="top" width="330">
+                      <![endif]-->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tbody>
+                        <tr>
+                            <td style="padding:15px 0 5px;text-align:left;font-size:14px;line-height:1.5; vertical-align: top;" width="50%" class="stack-column">
+                              <span style="font-weight: 300">Delivery</span>
+                              <div style="font-size: 16px; font-weight: 300; padding: 30px 0">
+                                {{ shipping_method.title | default: 'None selected' }}
+                              </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <!--[if mso]>
+                      </td>
+                      </tr>
+                      </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              <table border="0" cellpadding="0" cellspacing="0"   <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">
+                    <img src="tdr.io/coterie/refer-a-friend-2.png" alt="Creating Email Magic" width="600" style="display: block;" />
+                  </td>
+                </tr>
+
+
+
+
+                <table border="0" cellpadding="0" cellspacing="0" class="kmImageBlock" max-width="680px" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%">
+                   <tbody class="kmImageBlockOuter">
+                      <tr>
+                         <td class="kmImageBlockInner" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0px;padding-right:0px;padding-left:0px;" valign="top">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="kmImageContentContainer" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;min-width:100%">
+                               <tbody>
+                                  <tr>
+                                     <td class="kmImageContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;table-layout:fixed;padding:0;font-size:0;padding:0;"> <a href="https://www.coterie.com/refer?utm_medium=Email&utm_source=Shopify&utm_campaign=orderconfirmation" target="_self" style="word-wrap:break-word;max-width:100%;color:#111;font-weight:normal;text-decoration:underline"> <img align="left" alt="Get $15 for every friend you refer." class="kmImage" src="http://tdr.io/coterie/refer-a-friend.png" width="600" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;max-width:100%;padding-bottom:0;display:inline;vertical-align:top;font-size:12px;width:100%;margin-right:0;max-width:1600px;padding:0;border-width:0;" /> </a> </td>
+                                  </tr>
+                               </tbody>
+                            </table>
+                         </td>
+                      </tr>
+                   </tbody>
+                </table>
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!-- Email Body : END -->
+
+
+     <!-- Email Footer : BEGIN -->
+      <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+        width="100%" style="max-width: 680px;" class="email-container">
+        </tbody>
+
+      </table>
+
+      <table style="width: 100%;max-width: 680px;border-top: 1px solid #dddddd;margin-bottom: 0px;" bgcolor="#FFFFFF"
+        role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%"
+        style="max-width: 680px;">
+
+        <tr>
+          <td bgcolor="#FFFFFF">
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+              width="100" style=" margin-top: 40px !important;margin-bottom: 20px !important;max-width: 100px;">
+              <tr>
+                <td width="50%"
+                  style="max-width:50%; min-width: 50%; text-align: center; ">
+                  <a href="https://www.instagram.com/coterie/"
+                    style="font-size: 14px;text-decoration:none; color: #222222; ">
+                    <img
+                      src="https://prismic-io.s3.amazonaws.com/coterie%2F51911540-6b89-4f28-98ef-cf352c54a798_ui+icon+-+social+-+insta%402x.png"
+                      height="23" alt="Instagram Page" />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF" style="">
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+              width="100%" style="max-width: 680px; ">
+
+              <p style="text-align: center; margin-bottom: 0px; font-weight: 300; font-size: 12px; line-height: 18px;">
+                <a style="color: black; text-align: center; margin-top: 40px;font-weight: 300; font-size: 12px; text-decoration: none;"
+                  href="https://www.coterie.com?utm_medium=Email&utm_source=Shopify&utm_campaign=orderconfirmation">Coterie</a><br>
+                45 Bond Street, New York, NY 10012 USA<br>
+                Coterie Baby, Inc. All Rights Reserved.
+              </p>
+
+              <p
+                style="text-align: center; margin-top: 0px; margin-top: 0px !important; font-weight: 300; font-size: 12px;margin-bottom: 40px; line-height: 18px;">
+
+                <a href="https://www.coterie.com/privacy-policy"
+                  style="font-size: 12px;text-decoration:none; color: #222222">
+                  Privacy Policy
+                </a>
+                &nbsp;|&nbsp;
+                <a href="https://www.coterie.com/terms-of-service"
+                  style="font-size: 12px;text-decoration:none; color: #222222">
+                  Terms of Service
+                </a>
+              </p>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Email Footer : END -->
+
+    <!--[if mso]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </div>
+</center>
+</body>
+</html>
